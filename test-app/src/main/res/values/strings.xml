@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ZivaCareSDK Test</string>
+    <string name="main_label">Please start in current order!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btn_test_createuser">Test Create User</string>
+    <string name="btn_test_deleteuser">Test Delete User</string>
+    <string name="btn_test_accesstoken">Test Access Token</string>
+    <string name="btn_test_refreshtoken">Test Refresh Token</string>
+    <string name="btn_test_endpoint_get">Test Endpoint Get</string>
+    <string name="btn_test_endpoint_put">Test Endpoint Post</string>
+    <string name="btn_test_cache">Test Cache</string>
+    <string name="message">message</string>
+    <string name="action_ok">OK</string>
+    <string name="btn_clear_cache">Clear Cache</string>
+</resources>

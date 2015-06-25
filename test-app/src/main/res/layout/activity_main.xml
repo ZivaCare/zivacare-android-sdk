@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zivacare.android.sdk.test.SdkTestActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding"
+                android:text="@string/main_label"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_createuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                app:cpb_textIdle="@string/btn_test_createuser"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_accesstoken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_accesstoken"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_deleteuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_deleteuser"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_refreshtoken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_refreshtoken"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_endpoint_get"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_endpoint_get"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_endpoint_put"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_endpoint_put"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_test_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                 app:cpb_textIdle="@string/btn_test_cache"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/btn_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hapticFeedbackEnabled="true"
+                android:padding="@dimen/default_padding"
+                android:layout_marginBottom="@dimen/default_padding"
+                app:cpb_textIdle="@string/btn_clear_cache"
+                android:textColor="@android:color/white"
+                app:cpb_colorIndicatorBackground="@color/cpb_grey"
+                app:cpb_colorIndicator="@color/green"
+                app:cpb_colorProgress="@color/semi_transparent"
+                app:cpb_selectorIdle="@drawable/circular_progress_selector"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

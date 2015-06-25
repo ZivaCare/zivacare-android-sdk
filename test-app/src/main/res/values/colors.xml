@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<color name="blap_accent_color">#fff37216</color>-->
+    <!--<color name="orange">#fff3aa31</color>-->
+    <!--<color name="header_color">#50f3aa31</color>-->
+
+
+    <!--<color name="text_color">#868686</color>-->
+
+    <color name="light_blue">#29b6f6</color>
+    <color name="green">#2baf2b</color>
+    <color name="semi_transparent">#33EAEAEA</color>
+
+</resources>
