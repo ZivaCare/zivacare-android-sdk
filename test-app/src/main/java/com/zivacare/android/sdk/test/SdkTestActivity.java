@@ -38,7 +38,7 @@ import com.zivacare.android.sdk.endpoints.ZivaCareActivitiesEndpoint;
 import com.zivacare.android.sdk.endpoints.ZivaCareEndpoint;
 import com.zivacare.android.sdk.endpoints.ZivaCareProfileEndpoint;
 import com.zivacare.android.sdk.network.ZivaCareResponse;
-import com.zivacare.android.sdk.network.ZivacareCallback;
+import com.zivacare.android.sdk.network.ZivaCareCallback;
 
 public class SdkTestActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -145,7 +145,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void createUser() {
-        mZivaSdk.createUser(new ZivacareCallback() {
+        mZivaSdk.createUser(new ZivaCareCallback() {
             @Override
             public void onSuccess(ZivaCareResponse response) {
                 btnTestCreateUser.setProgress(0);
@@ -193,7 +193,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
                 "2014-09-16T15:55:01+0000", "jogging", "3", "1.1",
                 "30", "100", "Europe/Bucharest"}};
         endpoint.setData(1, ZivaCareEndpoint.OP_INSERT,
-                "fitbit", null, dataValues, new ZivacareCallback() {
+                "fitbit", null, dataValues, new ZivaCareCallback() {
                     @Override
                     public void onSuccess(ZivaCareResponse response) {
                         btnTestEndPointPost.setProgress(0);
@@ -214,7 +214,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
     private void testEndpointGet() {
         ZivaCareEndpoint endpoint = new ZivaCareProfileEndpoint(mZivaSdk,
                 mZivaSdk.getConfig());
-        endpoint.getAll(1, new ZivacareCallback() {
+        endpoint.getAll(1, new ZivaCareCallback() {
             @Override
             public void onSuccess(ZivaCareResponse response) {
                 btnTestEndPointGet.setProgress(0);
@@ -233,7 +233,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void refreshToken() {
-        mZivaSdk.refreshToken(new ZivacareCallback() {
+        mZivaSdk.refreshToken(new ZivaCareCallback() {
             @Override
             public void onSuccess(ZivaCareResponse response) {
                 btnTestRefreshToken.setProgress(0);
@@ -253,7 +253,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void deleteUser() {
-        mZivaSdk.deleteUser(new ZivacareCallback() {
+        mZivaSdk.deleteUser(new ZivaCareCallback() {
             @Override
             public void onSuccess(ZivaCareResponse response) {
                 btnTestDeleteUser.setProgress(0);
@@ -273,7 +273,7 @@ public class SdkTestActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     private void getAccessToken() {
-        mZivaSdk.login(new ZivacareCallback() {
+        mZivaSdk.login(new ZivaCareCallback() {
             @Override
             public void onSuccess(ZivaCareResponse response) {
                 btnTestAccessToken.setProgress(0);

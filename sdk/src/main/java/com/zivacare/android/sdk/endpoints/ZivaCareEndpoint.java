@@ -27,7 +27,7 @@ import android.support.annotation.NonNull;
 
 import com.zivacare.android.sdk.ZivaCareConfig;
 import com.zivacare.android.sdk.ZivaCareSDK;
-import com.zivacare.android.sdk.network.ZivacareCallback;
+import com.zivacare.android.sdk.network.ZivaCareCallback;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -91,7 +91,7 @@ public abstract class ZivaCareEndpoint {
      *
      * @param version
      */
-    public void getAll(@NonNull int version, @NonNull ZivacareCallback callback) {
+    public void getAll(@NonNull int version, @NonNull ZivaCareCallback callback) {
         mSdk.callEndpoint(
                 String.format(API_URL_GENERAL, version, getType()), config, callback);
     }
@@ -102,7 +102,7 @@ public abstract class ZivaCareEndpoint {
      * @param version
      * @param code
      */
-    public void getByCode(int version, String code, @NonNull ZivacareCallback callback) {
+    public void getByCode(int version, String code, @NonNull ZivaCareCallback callback) {
         mSdk.callEndpoint(
                 String.format(API_URL_CODE, version, getType(), code), config, callback);
     }
@@ -113,7 +113,7 @@ public abstract class ZivaCareEndpoint {
      * @param version
      * @param date
      */
-    public void getByDate(int version, Date date, @NonNull ZivacareCallback callback) {
+    public void getByDate(int version, Date date, @NonNull ZivaCareCallback callback) {
         mSdk.callEndpoint(
                 String.format(API_URL_DATE, version, getType(),
                         DATE_FORMAT.format(date)), config, callback);
@@ -127,7 +127,7 @@ public abstract class ZivaCareEndpoint {
      * @param endDate
      */
     public void getByPeriod(int version, Date startDate,
-                            Date endDate, @NonNull ZivacareCallback callback) {
+                            Date endDate, @NonNull ZivaCareCallback callback) {
         mSdk.callEndpoint(
                 String.format(API_URL_PERIOD, version, getType(),
                         DATE_FORMAT.format(startDate),
@@ -175,7 +175,7 @@ public abstract class ZivaCareEndpoint {
      *                   <i>user_code & source</i></b>
      */
     public void setData(int version, String operation,
-                        String source, Object[][] dataValues, @NonNull ZivacareCallback callback) {
+                        String source, Object[][] dataValues, @NonNull ZivaCareCallback callback) {
         setData(version, operation, source, null, dataValues, callback);
     }
 
@@ -195,7 +195,7 @@ public abstract class ZivaCareEndpoint {
      */
     public void setData(@NonNull int version, @NonNull String operation,
                         @NonNull String source,  String[] dataNames,
-                        @NonNull Object[][] dataValues, @NonNull ZivacareCallback callback) {
+                        @NonNull Object[][] dataValues, @NonNull ZivaCareCallback callback) {
         Object[] dataArray = new Object[dataValues.length];
         for (int x = 0; x < dataValues.length; x++) {
             Map<String, Object> innerDataMap = new LinkedHashMap<String, Object>();

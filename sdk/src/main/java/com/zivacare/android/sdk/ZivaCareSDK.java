@@ -32,7 +32,7 @@ import com.android.volley.toolbox.Volley;
 import com.zivacare.android.sdk.network.NetworkUtils;
 import com.zivacare.android.sdk.network.ZivaCareGetRequest;
 import com.zivacare.android.sdk.network.ZivaCarePostRequest;
-import com.zivacare.android.sdk.network.ZivacareCallback;
+import com.zivacare.android.sdk.network.ZivaCareCallback;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -80,7 +80,7 @@ public class ZivaCareSDK {
      * @param callback
      */
     public void callEndpoint(@NonNull String endpointUrl, @NonNull ZivaCareConfig config,
-                             @NonNull ZivacareCallback callback) {
+                             @NonNull ZivaCareCallback callback) {
         String formatedEndpointUrl = mConfig.getApiUrl() + endpointUrl
                 + ZivaCareConfig.ACCESS_TOKEN_QUERY_PARAM
                 + (config != null ? config.getAccessToken() : System
@@ -102,7 +102,7 @@ public class ZivaCareSDK {
      */
     public void callEndpoint(@NonNull String endpoint, @NonNull ZivaCareConfig config,
                              @NonNull Map dataMap,
-                             @NonNull ZivacareCallback callback) {
+                             @NonNull ZivaCareCallback callback) {
 
 
         final ZivaCarePostRequest request = new ZivaCarePostRequest(
@@ -124,7 +124,7 @@ public class ZivaCareSDK {
      * @return Map with keys: @ZivaCareConfig.KEY_RESPONSE_CODE, @ZivaCareConfig.KEY_RESPONSE_STRING
      */
     public void setUser(@NonNull String dataSourceName, @NonNull String token,
-                        String secret, @NonNull ZivacareCallback callback) {
+                        String secret, @NonNull ZivaCareCallback callback) {
         final Map<String, String> mapParameters = new HashMap<String, String>();
         mapParameters.put(ZivaCareConfig.CLIENT_ID, getConfig().getClientId());
         mapParameters.put(ZivaCareConfig.CLIENT_SECRET, getConfig()
@@ -153,7 +153,7 @@ public class ZivaCareSDK {
      *
      * @throws Exception
      */
-    public void createUser(@NonNull ZivacareCallback callback) {
+    public void createUser(@NonNull ZivaCareCallback callback) {
         String clientId = this.getConfig().getClientId();
         String clientSecret = this.getConfig().getClientSecret();
         String clientUserId = this.getConfig().getClientUserId();
@@ -171,7 +171,7 @@ public class ZivaCareSDK {
      */
     public void createUser(String clientId, String clientSecret,
                            String clientUserId, String clientUserName,
-                           @NonNull ZivacareCallback callback) {
+                           @NonNull ZivaCareCallback callback) {
 
         final Map<String, String> mapParameters = new HashMap<String, String>();
         mapParameters.put(ZivaCareConfig.CLIENT_ID, clientId);
@@ -191,7 +191,7 @@ public class ZivaCareSDK {
      * Call the delete user with the data from ZivaCare application settings.<br>
      * This method uses the data from the mConfig and/or mConfig cache.
      */
-    public void deleteUser(@NonNull ZivacareCallback callback) {
+    public void deleteUser(@NonNull ZivaCareCallback callback) {
         String clientId = this.getConfig().getClientId();
         deleteUser(clientId, callback);
     }
@@ -202,7 +202,7 @@ public class ZivaCareSDK {
      * @param clientId
      * @param callback
      */
-    public void deleteUser(String clientId, @NonNull ZivacareCallback callback) {
+    public void deleteUser(String clientId, @NonNull ZivaCareCallback callback) {
         final String deleteUserUrl =mConfig.getDevUrl()
                 + String.format(ZivaCareConfig.DELETE_USER_QUERY_PARAM,
                 clientId, getConfig().getZivaUserCode());
@@ -221,7 +221,7 @@ public class ZivaCareSDK {
      * @param version
      */
     public void callEndpoint(@NonNull String endpoint, @NonNull int version,
-                             @NonNull ZivacareCallback callback) {
+                             @NonNull ZivaCareCallback callback) {
         String formatedEndpointUrl = mConfig.getApiUrl()
                 + String.format(endpoint, version)
                 + ZivaCareConfig.ACCESS_TOKEN_QUERY_PARAM
@@ -241,7 +241,7 @@ public class ZivaCareSDK {
      */
     public void callEndpoint(@NonNull String endpoint, @NonNull int version,
                              @NonNull Date date,
-                             @NonNull ZivacareCallback callback) {
+                             @NonNull ZivaCareCallback callback) {
         String formatedEndpointUrl = mConfig.getApiUrl()
                 + String.format(endpoint, version, date)
                 + ZivaCareConfig.ACCESS_TOKEN_QUERY_PARAM
@@ -263,7 +263,7 @@ public class ZivaCareSDK {
      */
     public void callEndpoint(@NonNull String endpoint, @NonNull int version,
                              @NonNull Date startDate, @NonNull Date endDate,
-                             @NonNull ZivacareCallback callback) throws Exception {
+                             @NonNull ZivaCareCallback callback) throws Exception {
         String formatedEndpointUrl = mConfig.getApiUrl()
                 + String.format(endpoint, version, startDate, endDate)
                 + ZivaCareConfig.ACCESS_TOKEN_QUERY_PARAM
@@ -282,7 +282,7 @@ public class ZivaCareSDK {
      * @param code
      */
     public void callEndpoint(@NonNull String endpoint, @NonNull int version,
-                             @NonNull String code, @NonNull ZivacareCallback callback)
+                             @NonNull String code, @NonNull ZivaCareCallback callback)
             throws Exception {
         String formatedEndpointUrl = mConfig.getApiUrl()
                 + String.format(endpoint, version, code)
@@ -299,7 +299,7 @@ public class ZivaCareSDK {
      * Call the login with authorisation to get a access token.<br>
      * This method uses the data from the mConfig and/or mConfig cache.
      */
-    public void login(@NonNull ZivacareCallback callback) {
+    public void login(@NonNull ZivaCareCallback callback) {
         String clientSecret = this.getConfig().getClientSecret();
         String specialToken = this.getConfig().getSpecialToken();
         login(clientSecret, specialToken, callback);
@@ -312,7 +312,7 @@ public class ZivaCareSDK {
      * @param specialToken
      */
     public void login(String clientSecret, String specialToken,
-                      @NonNull ZivacareCallback callback) {
+                      @NonNull ZivaCareCallback callback) {
 
         final Map<String, String> mapParameters = new HashMap<String, String>();
         mapParameters.put(ZivaCareConfig.SPECIAL_TOKEN, specialToken);
@@ -331,7 +331,7 @@ public class ZivaCareSDK {
      * Call a ZivaCare API refresh token.<br>
      * This method uses the data from the mConfig and/or mConfig cache.
      */
-    public void refreshToken(@NonNull ZivacareCallback callback) {
+    public void refreshToken(@NonNull ZivaCareCallback callback) {
         refreshToken(mConfig.getClientId(),
                 mConfig.getClientSecret(),
                 callback);
@@ -345,7 +345,7 @@ public class ZivaCareSDK {
      * @param callback
      */
     public void refreshToken(String clientId, String clientSecret,
-                             @NonNull ZivacareCallback callback) {
+                             @NonNull ZivaCareCallback callback) {
         final String formatedRefreshUrl =mConfig.getDevUrl()
                 + String.format(ZivaCareConfig.REFRESH_TOKEN_QUERY_PARAM,
                 clientId, clientSecret);

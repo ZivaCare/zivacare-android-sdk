@@ -26,7 +26,7 @@ package com.zivacare.android.sdk.network;
 /**
  * Created by Stelian Morariu on 23/6/2015.
  */
-public interface ZivacareCallback {
+public interface ZivaCareCallback {
 
     void onSuccess(ZivaCareResponse response);
 

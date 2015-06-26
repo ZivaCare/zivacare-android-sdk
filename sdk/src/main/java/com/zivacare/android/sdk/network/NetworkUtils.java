@@ -42,12 +42,12 @@ public class NetworkUtils {
 
     /**
      * Get a default handler for successful network requests. This handler will call
-     * the {@code onSuccess()} method of the passed {@link ZivacareCallback}.
+     * the {@code onSuccess()} method of the passed {@link ZivaCareCallback}.
      *
      * @param callback
      * @return
      */
-    public static Response.Listener<JSONObject> getDefaultHandler(final ZivacareCallback callback) {
+    public static Response.Listener<JSONObject> getDefaultHandler(final ZivaCareCallback callback) {
         return new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -63,12 +63,12 @@ public class NetworkUtils {
 
     /**
      * Get a default handler for failed network requests. This handler will call
-     * the {@code onError()} method of the passed {@link ZivacareCallback}.
+     * the {@code onError()} method of the passed {@link ZivaCareCallback}.
      *
      * @param callback
      * @return
      */
-    public static Response.ErrorListener getDefaultErrorHandler(final ZivacareCallback callback) {
+    public static Response.ErrorListener getDefaultErrorHandler(final ZivaCareCallback callback) {
         return new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -79,13 +79,13 @@ public class NetworkUtils {
 
     /**
      * Get a handler for successful user creation requests. This handler will call
-     * the {@code onSuccess()} method of the passed {@link ZivacareCallback} and will also
+     * the {@code onSuccess()} method of the passed {@link ZivaCareCallback} and will also
      * save the received ids and token in the current {@link ZivaCareConfig} and write them to cache.
      *
      * @param callback
      * @return
      */
-    public static Response.Listener<JSONObject> getCreateUserHandler(final ZivacareCallback callback,
+    public static Response.Listener<JSONObject> getCreateUserHandler(final ZivaCareCallback callback,
                                                                      final String clientSecret,
                                                                      final ZivaCareConfig mConfig) {
         return new Response.Listener<JSONObject>() {
@@ -114,13 +114,13 @@ public class NetworkUtils {
 
     /**
      * Get a handler for successful delete requests. This handler will call
-     * the {@code onSuccess()} method of the passed {@link ZivacareCallback} and will also
+     * the {@code onSuccess()} method of the passed {@link ZivaCareCallback} and will also
      * clear the received ids and tokens from the current {@link ZivaCareConfig} and from the cache.
      *
      * @param callback
      * @return
      */
-    public static Response.Listener<JSONObject> getDeleteUserHandler(final ZivacareCallback callback,
+    public static Response.Listener<JSONObject> getDeleteUserHandler(final ZivaCareCallback callback,
                                                                      final ZivaCareConfig mConfig) {
         return new Response.Listener<JSONObject>() {
             @Override
@@ -140,13 +140,13 @@ public class NetworkUtils {
 
     /**
      * Get a handler for successful login requests. This handler will call
-     * the {@code onSuccess()} method of the passed {@link ZivacareCallback} and will also
+     * the {@code onSuccess()} method of the passed {@link ZivaCareCallback} and will also
      * save the access token in the current {@link ZivaCareConfig} and write it to cache.
      *
      * @param callback
      * @return
      */
-    public static Response.Listener<JSONObject> getLoginHandler(final ZivacareCallback callback,
+    public static Response.Listener<JSONObject> getLoginHandler(final ZivaCareCallback callback,
                                                                 final ZivaCareConfig mConfig) {
         return new Response.Listener<JSONObject>() {
             @Override
@@ -167,13 +167,13 @@ public class NetworkUtils {
 
     /**
      * Get a handler for successful set user requests. This handler will call
-     * the {@code onSuccess()} method of the passed {@link ZivacareCallback} and will also
+     * the {@code onSuccess()} method of the passed {@link ZivaCareCallback} and will also
      * write the response to cache.
      *
      * @param callback
      * @return
      */
-    public static Response.Listener<JSONObject> getSetUserHandler(final ZivacareCallback callback,
+    public static Response.Listener<JSONObject> getSetUserHandler(final ZivaCareCallback callback,
                                                                   final ZivaCareConfig mConfig) {
         return new Response.Listener<JSONObject>() {
             @Override
